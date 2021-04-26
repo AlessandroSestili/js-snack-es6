@@ -3,17 +3,17 @@
 
 const listaBici = [
     {
-        nome: "montain-bike",
+        nome: "Montain-bike",
         peso: 7
     },
 
     {
-        nome: "cross",
+        nome: "Cross",
         peso: 10
     },
 
     {
-        nome: "track",
+        nome: "Track",
         peso: 12
     },
 
@@ -47,12 +47,17 @@ for (let i = 0; i < listaBici.length; i++) {
 // Ciclo di nuovo su tutte le bici per confrontare la bici piu leggera 
 for (let i = 0; i < listaBici.length; i++) {
     let pesoBicicletta = listaBici[i].peso;
-    let nomeBicicletta = listaBici[i].nome
+    let nomeBicicletta = listaBici[i].nome;
 
     let biciPiuLeggera = Math.min(...listaPesoBici);
+    let biciPiuPesante = Math.max(...listaPesoBici)
 
     if (pesoBicicletta === biciPiuLeggera) {
-        console.log(`La ${nomeBicicletta} è la bicicletta più leggera al mondo! Pesa solamente ${pesoBicicletta}kg. Pensa un pò che roba...`);
+        console.log(`La ${nomeBicicletta} è la bicicletta più leggera al mondo! Pesa solamente ${pesoBicicletta}kg.`);
+    }
+    
+    if (pesoBicicletta === biciPiuPesante) {
+        console.log(`La ${nomeBicicletta} è bici più ciotta sul mercato, arriva a pesare fino a ${pesoBicicletta}kg.`);
     }
 }
 
