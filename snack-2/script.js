@@ -83,11 +83,13 @@ for (let i = 0; i < serieA.length; i++) {
 
     squadra.puntiFatti = Math.ceil(Math.random() * 100);
     squadra.falliSubiti = Math.ceil(Math.random() * 100);
-
-    listaSquadreFallose.push(squadra.nome, squadra.falliSubiti)
 }
 
 // Infine usando la destrutturazione creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console.
+for (let i = 0; i < serieA.length; i++) {
+    let squadra = serieA[i];
 
-console.log(serieA);
-console.log(listaSquadreFallose);
+    let {nome , falliSubiti} = squadra;
+
+    console.log(`La squadra ${nome} ,durante la stagione 2021/2022, ha subito ${falliSubiti} goal`);
+}
