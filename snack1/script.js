@@ -38,9 +38,7 @@ for (let i = 0; i < listaBici.length; i++) {
 }
 
 console.log(
-`Ecco il peso della bici più leggera: ${Math.min(...listaPesoBici)}
-`
-);
+`Ecco il peso della bici più leggera: ${Math.min(...listaPesoBici)}`);
 
 
 
