@@ -25,20 +25,38 @@ const listaBici = [
     {
         nome: "Downhill",
         peso: 8
+    },
+
+    {
+        nome: "Faleriana",
+        peso: 3
     }
 ];
 
-// Stampare a schermo la bici con peso minore utilizzando destructuring e template literal
-var listaPesoBici = [];
+// Creo un Array dove ci saranno i pesi di tutte le biciclette 
+const listaPesoBici = [];
 
+// Ciclo su tutti gli oggetti nell' Array per recuperare il peso di ognuno e metterlo nell' Array sopra dichiarato
 for (let i = 0; i < listaBici.length; i++) {
-    let pesoBici = listaBici[i].peso;
-    
-    listaPesoBici.push(pesoBici)
+    let pesoBicicletta = listaBici[i].peso;
+
+    // Pusho i pesi nell' Array 
+    listaPesoBici.push(pesoBicicletta);
 }
 
-console.log(
-`Ecco il peso della bici più leggera: ${Math.min(...listaPesoBici)}`);
+// Ciclo di nuovo su tutte le bici per confrontare la bici piu leggera 
+for (let i = 0; i < listaBici.length; i++) {
+    let pesoBicicletta = listaBici[i].peso;
+    let nomeBicicletta = listaBici[i].nome
+
+    let biciPiuLeggera = Math.min(...listaPesoBici);
+
+    if (pesoBicicletta === biciPiuLeggera) {
+        console.log(`La ${nomeBicicletta} è la bicicletta più leggera al mondo! Pesa solamente ${pesoBicicletta}kg. Pensa un pò che roba...`);
+    }
+}
+
+
 
 
 
