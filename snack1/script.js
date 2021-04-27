@@ -8,6 +8,11 @@ const listaBici = [
     },
 
     {
+        nome: "Siciliana",
+        peso: 43
+    },
+
+    {
         nome: "Cross",
         peso: 10
     },
@@ -30,7 +35,12 @@ const listaBici = [
     {
         nome: "Faleriana",
         peso: 3
-    }
+    },
+
+    {
+        nome: "Hawaiiana",
+        peso: 1.5
+    },
 ];
 
 // Creo un Array dove ci saranno i pesi di tutte le biciclette 
@@ -52,11 +62,11 @@ for (let i = 0; i < listaBici.length; i++) {
     let biciPiuPesante = Math.max(...listaPesoBici);
 
     if (peso === biciPiuLeggera) {
-        console.log(`La ${nome} è la bicicletta più leggera al mondo! Pesa solamente ${peso}kg.`);
+        console.log(`La ${nome} è una delle biciclette più leggere al mondo! Pesa solamente ${peso}kg.`);
     }
 
     if (peso === biciPiuPesante) {
-        console.log(`La ${nome} è bici più ciotta sul mercato, arriva a pesare fino a ${peso}kg.`);
+        console.log(`La ${nome} è una delle bici più pesanti sul mercato. Pesa ${peso}kg.`);
     }
 }
 
